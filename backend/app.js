@@ -16,6 +16,8 @@ console.log('MONGO_URI:', process.env.MONGO_URI);
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use(express.static('frontend'));
+
 // MongoDB Verbindung
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,

@@ -35,7 +35,7 @@ form.addEventListener('submit', async (e) => {
   // Notizen laden
   async function loadNotes() {
     try {
-      const res = await fetch('http://localhost:5000/notes');
+      const res = await fetch('/notes');
       if (!res.ok) {
         throw new Error('Fehler beim Laden der Notizen');
       }
